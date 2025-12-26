@@ -4,26 +4,26 @@ This project implements a **complete machine learning and deep learning pipeline
 
 The project addresses two core problems:
 
-1. **Price Direction Prediction (Classification)** – Will the price go up or down tomorrow?
-2. **Price Forecasting (Regression)** – What will the future price look like?
+1. **Price Direction Prediction (Classification)**
+2. **Price Forecasting (Regression)** 
 
 ### Key Components
 
 ### 1. Data Loading & Exploration
 
 - Loads historical Bitcoin OHLC price data
-- Performs initial inspection (shape, statistics, missing values)
+- Performs initial inspection
 - Visualizes long-term closing price trends
 
 ### 2. Data Cleaning
 
-- Removes redundant columns (e.g., `Adj Close`)
+- Removes redundant columns
 - Checks and handles missing values
 - Ensures data consistency for time-series modeling
 
 ### 3. Feature Engineering
 
-- Date decomposition (year, month, day)
+- Date decomposition
 - Financial behavior features:
     - Open–Close spread
     - Low–High spread
@@ -45,19 +45,16 @@ The project addresses two core problems:
 ### 5. Machine Learning Models (Classification)
 
 Used to predict **price direction**:
-
 - Logistic Regression
 - Support Vector Machine (Polynomial Kernel)
 - XGBoost Classifier
 
 Evaluation:
-
 - ROC-AUC score
 - Train vs validation comparison
 - Confusion matrix visualization
 
 ### 6. Deep Learning Forecasting (LSTM)
-
 - Sequence-based time-series modeling using LSTM
 - Min-Max scaling for stable training
 - **TimeSeriesSplit backtesting** to respect temporal order
